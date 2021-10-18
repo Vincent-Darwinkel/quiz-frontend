@@ -1,38 +1,29 @@
-import { List, ListItem, ListItemText, Paper } from "@mui/material";
+import { Button, List, ListItem, ListItemText, Paper } from "@mui/material";
+import { getQuizByUuid } from "quizes";
 import { useState } from "react";
 import "./index.css";
 
 export default function Quiz() {
   const [currentQuestionOrderNr, setCurrentQuestionOrderNr] = useState(0);
-  const [quiz, setQuiz] = useState({
-    uuid: "427a2267-2733-441f-ace6-83f5eac99ae4",
-    name: "Toets 1",
-    questions: [
-      {
-        uuid: "85d3360f-6955-4fd8-a19d-1f67dd73e647",
-        orderNr: 0,
-        question: "Vraag: Wat doet een regressietest?",
-        answers: [
-          {
-            uuid: "e5d83f84-58b8-4ee3-8a82-b0ac25c334d2",
-            answer:
-              "Kijken of er geen componenten in een systeem zijn aangepast",
-          },
-          {
-            uuid: "335abb72-f4a8-44ef-9d81-8e7bcd5dc9ac",
-            answer: "Testen",
-          },
-        ],
-      },
-    ],
-  });
+  const [answered, setAnswered] = useState(false);
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
   const uuid = Object.values(params)[0];
+  const quiz = getQuizByUuid(uuid);
 
-  const getQuiz = async (uuid) => {};
-  const submitAnswer = async (uuid) => {};
+  const submitAnswer = async (answerNr) => {
+    if (answered) {
+      return;
+    }
+    setAnswered(true);
+    if (quiz?.questions[currentQuestionOrderNr]?.correctAnswerNr === answerNr) {
+      document.getElementById(quiz?.uuid + answerNr).style.background = "green";
+      return;
+    }
+
+    document.getElementById(quiz?.uuid + answerNr).style.background = "red";
+  };
 
   return (
     <div id="quiz">
@@ -44,14 +35,18 @@ export default function Quiz() {
           {quiz?.questions[currentQuestionOrderNr]?.answers?.map((answer) => (
             <ListItem
               button
-              key={answer?.uuid}
-              onClick={() => submitAnswer(answer?.uuid)}
+              key={quiz?.uuid + answer?.nr}
+              id={quiz?.uuid + answer?.nr}
+              onClick={() => submitAnswer(answer?.nr)}
             >
               <ListItemText>{answer.answer}</ListItemText>
             </ListItem>
           ))}
         </List>
       </Paper>
+      <Button size="large" id="next-question">
+        Volgende vraag
+      </Button>
     </div>
   );
 }
