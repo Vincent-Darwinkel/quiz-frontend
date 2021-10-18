@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemText } from "@mui/material";
+import { List, ListItem, ListItemText, Paper } from "@mui/material";
 import { getQuizzes } from "quizes";
 import { useState } from "react";
 import paths from "services/shared/router-paths";

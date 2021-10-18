@@ -1,0 +1,10 @@
+#quiz-result {
+  margin-top: 100px;
+  width: 80%;
+  margin: auto;
+}
+
+.quiz-result-paper {
+  padding: 10px;
+  margin-top: 10px;
+}
