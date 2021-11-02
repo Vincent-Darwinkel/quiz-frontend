@@ -333,6 +333,157 @@ const quizzes = [
       },
     ],
   },
+  {
+    uuid: "ceb7fcae-ded9-4cdf-bf64-223be7cde48b",
+    name: "Toets 3",
+    questions: [
+      {
+        uuid: "cc8588bc-2bc1-4e82-a26a-c33e40ee1340",
+        question: "Agile is:",
+        correctAnswerNr: 0,
+        substantiation:
+          "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Een evolutie",
+          },
+          {
+            nr: 1,
+            answer: "Een revolutie",
+          },
+        ],
+      },
+      {
+        uuid: "9e111100-e3a8-475c-8043-a8daa365911c",
+        question: "In welke gevallen kun je het beste integratietesten?",
+        correctAnswerNr: 4,
+        substantiation: "Een integratietest voer je uit op een API. Integratietesten zijn de middelste laag in de test pyramide.",
+        answers: [
+          {
+            nr: 0,
+            answer: "Als er geen concreet antwoord is",
+          },
+          {
+            nr: 1,
+            answer: "Als het heel omslachtig wordt om een unit test te schrijven",
+          },
+          {
+            nr: 2,
+            answer: "Als je iets wilt testen wat niet te mocken valt",
+          },
+          {
+            nr: 3,
+            answer: "Antwoord 1"
+          },
+          {
+            nr: 4,
+            answer: "Antwoord 1, 2 en 3"
+          }
+        ],
+      },
+      {
+        uuid: "6828eeee-e381-4d0e-baca-616f77796444",
+        question: "Unit testen kun je goed gebruiken om:",
+        correctAnswerNr: 0,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Grenswaarde analyse toe te passen - Equivalentieklassen te testen - State transition testing toe te passen",
+          },
+          {
+            nr: 1,
+            answer: "Procescyclus testen toe te passen",
+          },
+          {
+            nr: 2,
+            answer: "De gehele flow in de API te testen",
+          }
+        ],
+      },
+      {
+        uuid: "f61382d5-77f6-403a-ae8a-b5dba60d728c",
+        question: "Wat betekent function coverage?",
+        correctAnswerNr: 0,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Hoeveel functies zijn aangeroepen",
+          },
+          {
+            nr: 1,
+            answer: "Hoeveel mogelijkheden in een functie met meerdere inputs is behandeld",
+          },
+        ],
+      },
+      {
+        uuid: "fbeeb146-17fd-45ad-807d-90ffe2320cbb",
+        question: "Wat betekent statement coverage?",
+        correctAnswerNr: 0,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Is elke statement behandeld?",
+          },
+          {
+            nr: 1,
+            answer: "Hoeveel mogelijkheden zijn behandeld in het statement",
+          },
+        ],
+      },
+      {
+        uuid: "0974bbb7-4752-42a8-8669-069da4fac803",
+        question: "Wat betekent branch coverage?",
+        correctAnswerNr: 1,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Is elk knooppunt onder meerdere API's behandeld?",
+          },
+          {
+            nr: 1,
+            answer: "Is elk beslispunt behandeld in de code",
+          },
+        ],
+      },
+      {
+        uuid: "780c1a5f-ac9a-4674-ae8a-634a6b5bebb3",
+        question: "Wat betekent line coverage?",
+        correctAnswerNr: 0,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Het aantal uitgevoerde regels code gedeeld door de totale hoeveelheid regels code",
+          },
+          {
+            nr: 1,
+            answer: "Het aantal uitgevoerde regels code",
+          },
+        ],
+      },
+      {
+        uuid: "11529ddb-e497-4cf0-9940-9b63cd6e0a57",
+        question: "In welke gevallen kun je het besten mocken of stubben?",
+        correctAnswerNr: 1,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Als je wilt dat heel de flow wordt getest - Bij database verbindingen - Bij trage klasses"
+          },
+          {
+            nr: 1,
+            answer: "Bij database verbindingen - Bij het gebruik van web services - Trage klasses - Klassen met bijwerkingen - Klassen met willekeurig gedrag",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getQuizzes() {
