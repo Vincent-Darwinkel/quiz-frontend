@@ -482,6 +482,38 @@ const quizzes = [
           },
         ],
       },
+      {
+        uuid: "047c6773-a77f-4401-b511-32d2393be0a5",
+        question: "Wat zijn de overeenkomsten van TPI Next en TMMI?",
+        correctAnswerNr: 0,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "Beide zijn business driven - De kern lijkt veel op elkaar - Allebij zijn staged - Werken allebij met niveau's"
+          },
+          {
+            nr: 1,
+            answer: "TPI Next en TMMI zijn door hetzelfde bedrijf ontwikkelend - Beide zijn business driven",
+          },
+        ],
+      },
+      {
+        uuid: "23492875-80d2-4316-8c0c-fb8465a1f1e8",
+        question: "Wat zijn de verschillen tussen TPI Next en TMMI?",
+        correctAnswerNr: 1,
+        substantiation: "",
+        answers: [
+          {
+            nr: 0,
+            answer: "TMMI en TPI Next zijn niet door hetzelfde bedrijf ontwikkeld - TPI Next is moeilijk om toe te passen, hierdoor is het beter om het door een bedrijf te laten uitvoeren - Bij TPI Next moet je alles in level 1 behaald hebben om door te gaan"
+          },
+          {
+            nr: 1,
+            answer: "TMMI 85 % naar volgende level, TPI Next je moet alles behaald hebben - TMMI 1 level meer TPI Next 1 level minder - TMMI vereist meer een opleiding, TPI Next snel toepasbaar - TMMI gratis te verkrijgen op de site, TPI Next boek vereist"
+          },
+        ],
+      },
     ],
   },
 ];
